@@ -4,13 +4,13 @@ import {ArrowRight, ShieldIcon,UserIcon} from "lucide-react"
 const LoginLanding = () => {
   const loginPortal = [
     {
-      to:"login/admin",
+      to:"/login/admin",
       title:"Admin Portal",
       description:"manage your employees, departments, payroll and system configration"
       ,Icon:ShieldIcon
     },
        {
-      to:"login/employee",
+      to:"/login/employee",
       title:"Employee Portal",
       description:"View your profile, track attendance request time off and access payslip"
       ,Icon:UserIcon
