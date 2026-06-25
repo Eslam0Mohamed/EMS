@@ -8,7 +8,7 @@ const LoginForm = ({ role, title, subtitle }) => {
 
     const [error, setError] = useState("")
     const [showPassword, setShowPassword] = useState(false)
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
      const {
     register,
