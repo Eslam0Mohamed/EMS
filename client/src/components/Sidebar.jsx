@@ -6,7 +6,7 @@ import { Calendar, DollarSign, FileTextIcon, LayoutGridIcon, LogOut, MenuIcon, S
 // 1.29.36
 const Sidebar = () => {
 
-    const role = "" | "Employee "
+    const role = "Employee "
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: <LayoutGridIcon /> },
         role === "ADMIN" ?
