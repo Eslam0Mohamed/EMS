@@ -27,7 +27,7 @@ if (!confirm("Are you sure you want to delete this employee")) {
             </div>
             {
                 !employee.isDeleted && <div className='px-5 pb-2 flex gap-4'>
-                    <button onClick={onEdit(employee)} className='text-slate-600 rounded-xl bg-white/90 p-2.5 shadow-lg hover:text-slate-900 transition-all duration-200 '>
+                    <button onClick={()=>{onEdit(employee)}} className='text-slate-600 rounded-xl bg-white/90 p-2.5 shadow-lg hover:text-slate-900 transition-all duration-200 '>
                         <Pencil />
                     </button>
                     <button onClick={handleDelete} className='text-slate-600 rounded-xl bg-white/90 p-2.5 shadow-lg hover:text-rose-500 transition-all duration-200 '>
@@ -36,7 +36,7 @@ if (!confirm("Are you sure you want to delete this employee")) {
 
                 </div>
             }
-            
+
         </div>
     )
 }
