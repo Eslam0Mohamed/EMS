@@ -3,10 +3,10 @@ import { useEffect } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { dummyProfileData } from '../assets/assets'
 import { Calendar, DollarSign, FileTextIcon, LayoutGridIcon, LogOut, MenuIcon, Settings, UserIcon, XIcon } from 'lucide-react'
-// 1.29.36
+
 const Sidebar = () => {
 
-    const role = "Employee "
+    const role = "ADMIN"
     const navItems = [
         { name: "Dashboard", href: "/dashboard", icon: <LayoutGridIcon /> },
         role === "ADMIN" ?

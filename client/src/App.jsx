@@ -3,13 +3,13 @@ import Dashboard from "./pages/Dashboard"
 import LoginLanding from "./pages/LoginLanding"
 import Layout from "./pages/Layout"
 import Attendance from "./pages/Attendance"
-import Employees from "./pages/Employees"
 import Leave from "./pages/Leave"
 import Payslip from "./pages/Payslips"
 import Setting from "./pages/Setting"
 import { Navigate, Routes } from "react-router-dom"
 import { Route } from "react-router-dom"
 import LoginForm from "./components/LoginForm"
+import Employee from "./components/Employee"
 function App() {
 
   return (
@@ -24,7 +24,7 @@ function App() {
 
         <Route path="/" element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/employees" element={<Employees />} />
+          <Route path="/employees" element={<Employee />} />
           <Route path="/attendance" element={<Attendance />} />
           <Route path="/leave" element={<Leave />} />
           <Route path="/payslip" element={<Payslip />} />
