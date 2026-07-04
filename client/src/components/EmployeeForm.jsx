@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { DEPARTMENTS } from '../assets/assets'
 import { Loader2Icon } from 'lucide-react'
-
+// 3.20
 const EmployeeForm = ({ initialData, onSuccess, onCancel }) => {
     const navigate = useNavigate()
     const [loading, setLoading] = useState()

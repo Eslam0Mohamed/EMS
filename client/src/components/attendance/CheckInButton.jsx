@@ -1,0 +1,35 @@
+import React from 'react'
+
+const CheckInButton = ({ todayRecord, oneAction }) => {
+    const [loading, setLoading] = useState(false)
+    const handleAttendance = async () => {
+        setLoading(true)
+        setTimeout(() => { setLoading(false) }, 1000)
+        oneAction()
+    }
+    if (todayRecord?.checkOut) {
+        return (
+            <div className='flex flex-col items-center justify-center p-8 bg-slate-50 rounded-2xl border border-slate-200'>
+                <h3>Work Day Completed</h3>
+                <p>Great Job! See You Tomorrow</p>
+            </div>
+        )
+    }
+    const isCheckedIn = !!todayRecord?.isCheckedIn
+    return (
+        <div className='absolute bottom-4 right-4 flex flex-col z-1 '>
+        <button onClick={handleAttendance} disabled={loading} className={`w-full max-w-xs flex justify-between items-center gap-8 p-4 rounded-xl bg-linear-to-br text-white ${isCheckedIn?"from-slate-700 to-slate-900":"from-indigo-600 to-indigo-700"}`}>
+            {
+                loading? <Loader2Icon className="animate-spin size-7"/> : isCheckedIn ? <LogOutIcon className="size-7"/> : <LogInIcon className="size-7"/>
+                
+            }
+            <div className='relative flex flex-col items-center text-center'>
+                <h2>{loading?"Processing...":isCheckedIn?"Clock Out":"Clock In"}</h2>
+                <p>{isCheckedIn?"Click to end you shift":"start your work day"}</p>
+            </div>
+            </button>
+        </div>
+    )
+}
+
+export default CheckInButton
