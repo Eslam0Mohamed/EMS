@@ -1,6 +1,7 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { dummyAttendanceData } from '../assets/assets'
 import Loading from "../components/Loading"
+import CheckInButton from "../components/attendance/CheckInButton"
 import AttendanceStats from '../components/attendance/AttendanceStats'
 import AttendanceHistory from '../components/attendance/AttendanceHistory'
 const Attendance = () => {
@@ -19,7 +20,7 @@ const Attendance = () => {
     return <Loading />
   }
 
-  const today = new Data()
+  const today = new Date()
   today.setHours(0, 0, 0, 0)
   const todayRecord = history.find((r) => new Date(r.date).toDateString() === today.toDateString())
   return (
