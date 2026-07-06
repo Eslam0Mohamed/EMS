@@ -3,7 +3,7 @@ import { getDayTypeDisplay, getWorkingHoursDisplay } from '../../assets/assets'
 import { format } from "date-fns"
 const AttendanceHistory = ({ history }) => {
   return (
-    <div className='carf overflow-hidden'>
+    <div className='card overflow-hidden'>
       <div className='px-6 py-4 border border-slate-400 '>
         <h2 className='font-semibold text-slate-900'>Recent Activity</h2>
       </div>
