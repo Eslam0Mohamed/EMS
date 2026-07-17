@@ -62,13 +62,13 @@ export const login = async (req, res) => {
 };
 
 export const session = async (req, res) => {
-    const { session } = req.session
+    const session = req.session
     return res.json({ user: session })
 }
 
 export const changePassword = async (req, res) => {
     try {
-        const { session } = req.session
+        const session = req.session
         const { currentPassword, newPassword } = req.body
         if (!currentPassword || !newPassword) {
             return res.status(400).json({ error: "Both passwords are required" })
